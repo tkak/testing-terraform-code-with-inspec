@@ -1,0 +1,19 @@
+---
+driver:
+  name: terraform
+
+provisioner:
+  name: terraform
+
+platforms:
+  - name: dummy
+
+suites:
+  - name: default
+    run_list:
+    attributes:
+
+verifier:
+  name: shell
+  command: 'inspec exec test/verify -t azure://'
+
